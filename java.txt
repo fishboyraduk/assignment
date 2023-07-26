@@ -1,0 +1,125 @@
+// Increment & Decremet
+int num= 1;
+num= num+1;
+Console.WriteLine("First Increment:" +value);
+num+=1;
+Console.WriteLine("Second Increment:" + value);
+num++;
+Console.WriteLine("Third Increment :" + value);
+num=num -1;
+Console.WriteLine("First Decrement:" + value);
+num=1;
+Console.WriteLine("Second Decrement:" +value);
+num--;
+Console.WriteLine("Third Decrement:" +value);
+
+//Increment and decrement order
+int value = 1;
+value++;
+System.out.println("First:" + value);
+System.out.println("Second:" + value++);
+System.out.println("Third:" + value);
+System.out.println("First:" + (++value));
+int value = 1;
+++value;
+value++;
+System.out.println("First:" + value);
+
+//Converting to celcius
+int fahrenheit = 94;
+double temperature = ((fahrenheit - 32) * 5.0/9);
+System.out.println("The temperature is " + temperature + " degree celcius");
+int fahrenheit = 94;
+double temperature = ((fahrenheit - 32) * 5.0/9);
+System.out.println("The temperature is " + Math.round(temperature) + " degree celcius");
+
+//Overiding
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random dice = new Random();
+        int roll1 = dice.nextInt();
+        int roll2 = dice.nextInt(101);
+        int roll3 = dice.nextInt(51) + 50;
+        System.out.println("First roll: " + roll1);
+        System.out.println("Second roll: " + roll2);
+        System.out.println("Third roll: " + roll3);
+    }
+}
+
+//Dice if-else
+Random dice = new Random();
+int roll1 = dice.Next(1,7);
+int roll2 = dice.Next(1,7);
+int roll3 = dice.Next(1,7);
+int total =roll1+roll2+roll3;
+
+Console.WriteLine($"Dice roll: {roll1} +{roll2} + {roll3}");
+
+if ((roll1==roll2) && (roll2==roll3))
+
+{
+    Console.WriteLine("You rolled tripples! +6 bonus to total!");
+    total += 6;
+}
+else if (((roll1==roll2) || (roll2==roll3)  || (roll1==roll3)))
+{
+    Console.WriteLine("You rolled doubles! +2 bonus to total!");
+    total += 2;
+}
+
+if (total >= 15)
+{
+    Console.WriteLine("You win!");
+}
+
+else 
+{
+    Console.WriteLine("Sorry, you lose.");
+}
+
+//if else
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int daysUntilExpiration = random.nextInt(12);
+        int discountPercentage = 0;
+        
+        if (daysUntilExpiration == 1) {
+            discountPercentage = 20;
+        }
+        
+        if (daysUntilExpiration <= 5) {
+            discountPercentage = 10;
+        }
+        
+        if (daysUntilExpiration < 1) {
+            System.out.println("Your subscription has expired!");
+        } else if (daysUntilExpiration == 1) {
+            System.out.println("Your subscription expires within a day!");
+            System.out.println("Renew now and save " + discountPercentage + "%!");
+        } else if (daysUntilExpiration <= 5) {
+            System.out.println("Your subscription expires in: " + daysUntilExpiration + " days.");
+            System.out.println("Renew now and save " + discountPercentage + "%!");
+        } else if (daysUntilExpiration <= 10) {
+            System.out.println("Your subscription expires in: " + daysUntilExpiration + " days.");
+            System.out.println("Your subscription will expire soon. Renew now!");
+        }
+    }
+
+//array challenge
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        String[] orderIds = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+        for (String items : orderIds) {
+            if (items.startsWith("B")) {
+                System.out.println(items);
+            }
+        }
+    }
+}
